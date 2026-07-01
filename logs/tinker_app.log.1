@@ -1,0 +1,70 @@
+2026-06-30 10:46:06,129 ERROR: Exception on /index [GET] in /mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/venv/lib/python3.8/site-packages/flask/app.py:838]
+Traceback (most recent call last):
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/venv/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/venv/lib/python3.8/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/venv/lib/python3.8/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/venv/lib/python3.8/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/venv/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/app/routes.py", line 36, in index
+    return render_template(
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/venv/lib/python3.8/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/venv/lib/python3.8/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/venv/lib/python3.8/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/app/templates/index.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/app/templates/base.html", line 56, in top-level template code
+    {% block content %}
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/app/templates/base.html", line 78, in block 'content'
+    {% block app_content %}
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/app/templates/index.html", line 47, in block 'app_content'
+    {% include '_post.html' %}
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/app/templates/_post.html", line 15, in top-level template code
+    {{ moment(post.timestamp).startOf('day').fromNow() }}
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/venv/lib/python3.8/site-packages/jinja2/utils.py", line 92, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+jinja2.exceptions.UndefinedError: 'flask_moment.moment object' has no attribute 'startOf'
+2026-06-30 10:46:08,587 ERROR: Exception on /index [GET] in /mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/venv/lib/python3.8/site-packages/flask/app.py:838]
+Traceback (most recent call last):
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/venv/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/venv/lib/python3.8/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/venv/lib/python3.8/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/venv/lib/python3.8/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/venv/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/app/routes.py", line 36, in index
+    return render_template(
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/venv/lib/python3.8/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/venv/lib/python3.8/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/venv/lib/python3.8/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/app/templates/index.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/app/templates/base.html", line 56, in top-level template code
+    {% block content %}
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/app/templates/base.html", line 78, in block 'content'
+    {% block app_content %}
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/app/templates/index.html", line 47, in block 'app_content'
+    {% include '_post.html' %}
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/app/templates/_post.html", line 15, in top-level template code
+    {{ moment(post.timestamp).startOf('day').fromNow() }}
+  File "/mnt/c/Users/esami/OneDrive/Desktop/software_development/flask/chapter16_timestamp/venv/lib/python3.8/site-packages/jinja2/utils.py", line 92, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+jinja2.exceptions.UndefinedError: 'flask_moment.moment object' has no attribute 'startOf'
